@@ -3,6 +3,7 @@ import Navbutton from './Navbutton'
 import { HomeIcon,File,UserRound, FileIcon } from 'lucide-react'
 import Link from 'next/link'
 import { ModeToggle } from './ModeToggle'
+import { UserButton } from '@clerk/nextjs'
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
         <Navbutton href='/tickets' label='home' icon={File}/>
         <Navbutton href='/customers' label='Customer' icon={UserRound}/>
         <ModeToggle/>
+        <UserButton/>
 
           
         </div>
