@@ -24,7 +24,7 @@ export const customers = pgTable("customers", {
   notes: text("notes"),
   active: boolean("active").notNull().default(true),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp().defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
 });
 
 export const tickets = pgTable("tickets", {
@@ -37,7 +37,7 @@ export const tickets = pgTable("tickets", {
   completed: boolean("completed").notNull().default(false),
   tech: varchar("tech").notNull().default("unassigned"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp().defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
 });
 
 //relations
